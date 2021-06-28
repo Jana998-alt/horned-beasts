@@ -1,3 +1,4 @@
+import React from 'react';
 import hornedBeast from './hornedBeast';
 
 const Main = () => {

@@ -1,3 +1,5 @@
+import React from 'react';
+
 const hornedBeast = (beastTitle,ImageURL,imageTitle,description) => {
     return (
         <div>

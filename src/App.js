@@ -1,20 +1,22 @@
-import logo from './logo.svg';
 import React from 'react';
 // import reactDom from 'react-dom';
-import './App.css';
-import Header from './components/Header.js';
-import Main from './components/Main.js';
-import Footer from './components/Footer';
+// import './App.css';
+// import Header from './components/Header.js';
+// import Main from './components/Main.js';
+// import Footer from './components/Footer';
 
 
-function App() {
+class App extends React.Component {
+  render () {
   return (
     <div className="App">
-      <Header />
+      <h1>hi</h1>
+      {/* <Header />
       <Main />
-      <Footer />
+      <Footer /> */}
     </div>
-  );
+  )
+}
 }
 
 export default App;
