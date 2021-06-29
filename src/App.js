@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/Header.js';
 import Main from './components/Main.js';
 import Footer from './components/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class App extends React.Component {
