@@ -5,17 +5,20 @@ import Header from './components/Header.js';
 import Main from './components/Main.js';
 import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import Beasts from './Beasts.json'
+import SelectedBeasts from './components/SelectedBeasts';
 
 
 class App extends React.Component {
-  constructor(props){
+  
+  constructor (props){
     super(props);
-    this.state = {
-      // beastTitle,ImageURL,imageTitle,description,noOfHorns
-      data : Beasts,
+    this.state={
+      showingABeast : false,
     }
-  }
 
+    
+  }
   
   render () {
     return (
