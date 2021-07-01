@@ -1,5 +1,6 @@
 import React from 'react';
 import { Modal } from 'bootstrap';
+import { Button } from 'bootstrap';
 import HornedBeast from './HornedBeast';
 import Main from './Main';
 import App from '../App';
@@ -7,37 +8,30 @@ import App from '../App';
 
 class SelectedBeasts extends React.Component {
     render (){
-
+        console.log(this.props.clickedBeast);
             return(
-                <div>
-                    <SelectedBeasts show={this.state.showingABeast}/>
-                </div>
-            )
-            console.console.log("hi");
+                <h1>hi</h1>)
+            //     <Modal show={this.props.ShowingBeastState} onHide={this.props.handleClose}>
+            //     <Modal.Header closeButton>
+            //     <Modal.Title></Modal.Title>
+            //     </Modal.Header>
+            //     <Modal.Body></Modal.Body>
+            //     <Modal.Footer>
+            //     <Button variant="secondary" onClick={this.props.handleClose}>
+            //         Close
+            //     </Button>
+            //     <Button variant="primary" onClick={this.props.handleClose}>
+            //         Save Changes
+            //     </Button>
+            //     </Modal.Footer>
+            //     </Modal>
+            // )
 
-        // const [show, setShow] = useState(false);
-        // const handleClose = () => setShow(false);
-        // const handleShow = () => setShow(true);
-
-
-        // return(
-        // <Modal show={show} onHide={handleClose}>
-        // <Modal.Header closeButton>
-        // <Modal.Title>{this.props.beastTitle}</Modal.Title>
-        // </Modal.Header>
-        // <Modal.Body>{this.props.description}</Modal.Body>
-        // <Modal.Footer>
-        // <Button variant="secondary" onClick={handleClose}>
-        //     Close
-        // </Button>
-        // <Button variant="primary" onClick={handleClose}>
-        //     Save Changes
-        // </Button>
-        // </Modal.Footer>
-        // </Modal>
-        // )
+            
         
-    }
+     }
 }
 
 export default SelectedBeasts;
+
+// {this.props.beastTitle}

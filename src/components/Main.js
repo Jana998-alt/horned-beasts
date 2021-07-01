@@ -4,15 +4,14 @@ import HornedBeast from './HornedBeast';
 import Beasts from './Beasts.json'
 import SelectedBeasts from './SelectedBeasts';
 
-
+// jana = this.props.changeShowingBeastState ==> this is the function that I passed
 class Main extends React.Component {
 
-    changeShowingBeastState = () => {
-        this.setState({showingABeast : true})
-        console.log(this.state.showingABeast);
-        return(<SelectedBeasts/>)
-        
+    passingBeastInfo = () => {
+        this.setState({clickedBeast: this.beast});
+        this.props.changeShowingBeastState();
     }
+    
 
    render (){
         return(
@@ -20,7 +19,7 @@ class Main extends React.Component {
                 {Beasts.map(beast=>{
 
                     return(
-                        <HornedBeast description={beast.description} ImageURL={beast.image_url} beastTitle={beast.title} imageTitle={beast.narwhal} noOfHorns={beast.horns} key={beast.title}/>
+                        <HornedBeast beast={beast} passingBeastInfo={this.passingBeastInfo} findingTheSelectedBeast={this.findingTheSelectedBeast} ShowingBeastState={this.ShowingBeastState} changeShowingBeastState={this.props.changeShowingBeastState} description={beast.description} ImageURL={beast.image_url} beastTitle={beast.title} imageTitle={beast.narwhal} noOfHorns={beast.horns} key={beast.title}/>
                        )
                    }
 
