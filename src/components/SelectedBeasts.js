@@ -1,33 +1,33 @@
 import React from 'react';
-import { Modal } from 'bootstrap';
-import { Button } from 'bootstrap';
-import HornedBeast from './HornedBeast';
-import Main from './Main';
-import App from '../App';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import './ModalStylesheet.css';
+
 
 
 class SelectedBeasts extends React.Component {
     render (){
-        console.log(this.props.clickedBeast);
+        {console.log(this.props.clickedBeast)}
             return(
-                <h1>hi</h1>)
-            //     <Modal show={this.props.ShowingBeastState} onHide={this.props.handleClose}>
-            //     <Modal.Header closeButton>
-            //     <Modal.Title></Modal.Title>
-            //     </Modal.Header>
-            //     <Modal.Body></Modal.Body>
-            //     <Modal.Footer>
-            //     <Button variant="secondary" onClick={this.props.handleClose}>
-            //         Close
-            //     </Button>
-            //     <Button variant="primary" onClick={this.props.handleClose}>
-            //         Save Changes
-            //     </Button>
-            //     </Modal.Footer>
-            //     </Modal>
-            // )
+             
+                <Modal show={this.props.showingABeast} onHide={this.props.handleClose} className="Modal">
+                <Modal.Header closeButton>
+                  <Modal.Title>{this.props.clickedBeast.title}</Modal.Title>
+                </Modal.Header>
 
-            
+                <Modal.Body>
+                  <img className="modalImg" src={this.props.clickedBeast.image_url} alt={this.props.clickedBeast.title} title = {this.props.clickedBeast.title} />
+                  <p>{this.props.clickedBeast.description}</p>
+                  </Modal.Body>
+
+                <Modal.Footer>
+                  <Button variant="secondary" onClick={this.props.handleClose}>
+                    Close 
+                  </Button>
+                </Modal.Footer>
+              </Modal>
+
+            )
         
      }
 }
