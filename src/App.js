@@ -6,7 +6,6 @@ import Main from './components/Main.js';
 import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 class App extends React.Component {
   constructor(props){
     super(props);
