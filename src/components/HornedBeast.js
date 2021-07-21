@@ -4,6 +4,7 @@ import ListGroupItem from 'react-bootstrap/ListGroupItem'
 import ListGroup from 'react-bootstrap/ListGroup'
 import reactDom from 'react-dom';
 import SelectedBeasts from './SelectedBeasts';
+import CardsStyleSheet from './CardsStyleSheet.css'
 
 
 class HornedBeast extends React.Component {
@@ -17,11 +18,16 @@ class HornedBeast extends React.Component {
     favorate =() => {
         this.setState({favorited : this.state.favorited + 1}) 
     }
-    
+
+    changeShowingBeastState = () =>{
+        this.props.changeShowingBeastState(this.props.beastTitle);
+    }
+
+
     render(beastTitle,ImageURL,imageTitle,description,noOfHorns) {
         return (
            
-            <Card style={{ width: '18rem' }}>
+            <Card onClick={this.changeShowingBeastState} style={{ width: '18rem' }}>
             <Card.Img variant="top" src={this.props.ImageURL} alt={this.props.imageTitle} title = {this.props.imageTitle} />
             <Card.Body>
                 <Card.Title>{this.props.beastTitle}</Card.Title>
@@ -45,3 +51,5 @@ class HornedBeast extends React.Component {
 export default HornedBeast;
 
 
+// ShowingBeastState={
+    // this.ShowingBeastState} 

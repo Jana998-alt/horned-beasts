@@ -1,37 +1,37 @@
 import React from 'react';
-import { Modal } from 'bootstrap';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import './ModalStylesheet.css';
+
 
 
 class SelectedBeasts extends React.Component {
     render (){
-    // if (showing){
-        console.log('hi');
-        return(
-        <Modal show={true}>
-        <Modal.Header closeButton>
-          <Modal.Title>{this.props.beastTitle}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>{this.props.description}</Modal.Body>
-      </Modal> 
-      
-        )
-        }
-    // }
+        {console.log(this.props.clickedBeast)}
+            return(
+             
+                <Modal show={this.props.showingABeast} onHide={this.props.handleClose} className="Modal">
+                <Modal.Header closeButton>
+                  <Modal.Title>{this.props.clickedBeast.title}</Modal.Title>
+                </Modal.Header>
+
+                <Modal.Body>
+                  <img className="modalImg" src={this.props.clickedBeast.image_url} alt={this.props.clickedBeast.title} title = {this.props.clickedBeast.title} />
+                  <p>{this.props.clickedBeast.description}</p>
+                  </Modal.Body>
+
+                <Modal.Footer>
+                  <Button variant="secondary" onClick={this.props.handleClose}>
+                    Close 
+                  </Button>
+                </Modal.Footer>
+              </Modal>
+
+            )
+        
+     }
 }
 
 export default SelectedBeasts;
 
-{/* <Modal show={showing} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>{this.props.beastTitle}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>{this.props.description}</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>  */}
+// {this.props.beastTitle}
