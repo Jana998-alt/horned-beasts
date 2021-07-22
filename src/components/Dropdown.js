@@ -1,24 +1,30 @@
 import React, { Component } from 'react'
-import DropdownButton from 'react-bootstrap/DropdownButton'
+import Form from 'react-bootstrap/Form'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
 
-export class Dropdown extends Component {
+
+export class DropdownElement extends Component {
+
+    
+
     render() {
         return (
             <div>
-                <Dropdown>
-                    <Dropdown.Toggle variant="success" id="dropdown-basic">
-                        Dropdown Button
-                    </Dropdown.Toggle>
+                <Form.Group as={Row} className="mb-3" onClick={this.props.filterHornes}>
+                    <Form.Label column sm={2}>filter by number of horns</Form.Label>
+                    <Form.Control as='select' name="bStatus" >
+                    <option value="All">All</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                        <option value="100">One hundred</option>
+                    </Form.Control>
+                </Form.Group>
 
-                    <Dropdown.Menu>
-                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                    </Dropdown.Menu>
-                </Dropdown>
-            </div>
+            </div >
         )
     }
 }
 
-export default Dropdown
+export default DropdownElement
