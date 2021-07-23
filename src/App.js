@@ -4,9 +4,11 @@ import Header from './components/Header.js';
 import Main from './components/Main.js';
 import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Beasts from './components/Beasts.json';
 import SelectedBeasts from './components/SelectedBeasts';
 import './App.css'
+
 
 class App extends React.Component {
   
